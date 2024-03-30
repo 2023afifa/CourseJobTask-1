@@ -1,13 +1,17 @@
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: import.meta.env.VITE_apiKey,
-    authDomain: import.meta.env.VITE_authDomain,
-    projectId: import.meta.env.VITE_projectId,
-    storageBucket: import.meta.env.VITE_storageBucket,
-    messagingSenderId: import.meta.env.VITE_messagingSenderId,
-    appId: import.meta.env.VITE_appId,
-};
+    apiKey: "AIzaSyD7oysr-dE60HwYafwxlr-veKd2KJGYufo",
+    authDomain: "taskmanagement-593c5.firebaseapp.com",
+    projectId: "taskmanagement-593c5",
+    storageBucket: "taskmanagement-593c5.appspot.com",
+    messagingSenderId: "355011398244",
+    appId: "1:355011398244:web:bffdedaab064f32937ad71"
+  };
 
 
-export const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+export default auth;
